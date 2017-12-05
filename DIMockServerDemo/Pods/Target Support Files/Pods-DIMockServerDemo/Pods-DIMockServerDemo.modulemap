@@ -1,0 +1,6 @@
+framework module Pods_DIMockServerDemo {
+  umbrella header "Pods-DIMockServerDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

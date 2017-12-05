@@ -1,0 +1,33 @@
+{
+  "name": "DIMockServer",
+  "version": "0.1.0",
+  "summary": "Small framework that helps mock server during UI Tests and development",
+  "homepage": "https://github.com/digitalindiana/DIMockServer",
+  "license": {
+    "type": "Copyright",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Piotr Adamczak": "piotr.adamczak@digitalindiana.pl"
+  },
+  "source": {
+    "http": "https://github.com/digitalindiana/DIMockServer",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "DIMockServer/Classes/**/*",
+  "resources": "DIMockServer/Resources/**/*.*",
+  "dependencies": {
+    "Swifter": [
+
+    ],
+    "GRMustache.swift": [
+
+    ],
+    "QorumLogs": [
+
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+framework module DIMockServer {
+  umbrella header "DIMockServer-umbrella.h"
+
+  export *
+  module * { export * }
+}
