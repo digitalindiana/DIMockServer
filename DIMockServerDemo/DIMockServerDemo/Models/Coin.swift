@@ -20,14 +20,18 @@ class Coin {
     var price: Double?
 
     // Mappable
-    required init(JSON: JSON) {
-        lastPriceBtc = priceBtc
-        uid          = JSON["id"].stringValue
-        name         = JSON["name"].stringValue
-        symbol       = JSON["symbol"].stringValue
-        rank         = JSON["rank"].intValue
-        priceUsd     = JSON["price_usd"].doubleValue
-        priceBtc     = JSON["price_btc"].doubleValue
+    required init(JSON: JSON, currency: String = Constants.defaultCurrency) {
+        self.lastPriceBtc = priceBtc
+        self.uid          = JSON["id"].stringValue
+        self.name         = JSON["name"].stringValue
+        self.symbol       = JSON["symbol"].stringValue
+        self.rank         = JSON["rank"].intValue
+        self.priceUsd     = JSON["price_usd"].doubleValue
+        self.priceBtc     = JSON["price_btc"].doubleValue
+
+        let currencyKey   = "price_\(currency.lowercased())"
+        self.currency     = currency
+        self.price        = JSON[currencyKey].doubleValue
     }
 
     func formattedPrice() -> String {

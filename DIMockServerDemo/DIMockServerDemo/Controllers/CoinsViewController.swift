@@ -59,14 +59,25 @@ class CoinsViewController: UITableViewController {
 extension CoinsViewController {
 
     func fetchCoins() {
-        RestAPIManager.shared.fetchTopCoins { (json, error) in
+        RestAPIManager.shared.fetchTopCoins { (json, currency, error) in
 
             DispatchQueue.main.async{
                 self.refreshControl?.endRefreshing()
             }
 
             if let jsonArray = json?.array {
-                self.coins = jsonArray.map { return Coin(JSON: $0) }.sorted { $0.rank < $1.rank }
+                //Parse fresh coin info
+                var coins = jsonArray.map { return Coin(JSON: $0, currency: currency) }
+
+                //Update last price
+                coins = coins.map({ (freshCoin) -> Coin in
+                    let savedCoin = self.coins.filter { $0.uid == freshCoin.uid }.first
+                    freshCoin.lastPriceBtc = savedCoin?.priceBtc
+                    return freshCoin
+                })
+
+                //Sort
+                self.coins = coins.sorted { $0.rank < $1.rank }
 
                 DispatchQueue.main.async{
                     self.tableView.reloadData()

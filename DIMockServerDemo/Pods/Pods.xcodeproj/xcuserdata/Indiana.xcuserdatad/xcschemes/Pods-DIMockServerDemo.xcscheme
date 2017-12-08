@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ACB702DFE11CD01765C4D5482E455A90"
+               BlueprintIdentifier = "0453850B471BF1FB6957280C79F5F920"
                BuildableName = "Pods_DIMockServerDemo.framework"
                BlueprintName = "Pods-DIMockServerDemo"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ACB702DFE11CD01765C4D5482E455A90"
+            BlueprintIdentifier = "0453850B471BF1FB6957280C79F5F920"
             BuildableName = "Pods_DIMockServerDemo.framework"
             BlueprintName = "Pods-DIMockServerDemo"
             ReferencedContainer = "container:Pods.xcodeproj">

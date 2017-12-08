@@ -8,14 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		4C776BADED9955FC385191FA /* Pods_DIMockServerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16FB6E0F17A4BF3F79511B60 /* Pods_DIMockServerDemo.framework */; };
+		BB03B7051FDB1BD000D22AF8 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB03B7041FDB1BD000D22AF8 /* Coin.swift */; };
 		BB6F8F3A1FBE028A003B3AD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F8F391FBE028A003B3AD1 /* AppDelegate.swift */; };
-		BB6F8F3C1FBE028A003B3AD1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F8F3B1FBE028A003B3AD1 /* FirstViewController.swift */; };
-		BB6F8F3E1FBE028A003B3AD1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F8F3D1FBE028A003B3AD1 /* SecondViewController.swift */; };
+		BB6F8F3C1FBE028A003B3AD1 /* CoinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F8F3B1FBE028A003B3AD1 /* CoinsViewController.swift */; };
+		BB6F8F3E1FBE028A003B3AD1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F8F3D1FBE028A003B3AD1 /* SettingsViewController.swift */; };
 		BB6F8F411FBE028A003B3AD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6F8F3F1FBE028A003B3AD1 /* Main.storyboard */; };
 		BB6F8F431FBE028A003B3AD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB6F8F421FBE028A003B3AD1 /* Assets.xcassets */; };
 		BB6F8F461FBE028A003B3AD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6F8F441FBE028A003B3AD1 /* LaunchScreen.storyboard */; };
 		BB6F8F511FBE028A003B3AD1 /* DIMockServerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F8F501FBE028A003B3AD1 /* DIMockServerDemoTests.swift */; };
 		BB6F8F5C1FBE028A003B3AD1 /* DIMockServerDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F8F5B1FBE028A003B3AD1 /* DIMockServerDemoUITests.swift */; };
+		BB872F5E1FDB46E60024C897 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB872F5D1FDB46E50024C897 /* Constants.swift */; };
+		BB872F601FDB47E60024C897 /* PickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB872F5F1FDB47E60024C897 /* PickerCell.swift */; };
+		BB99F2671FDB235500F9982C /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB99F2661FDB235500F9982C /* CoinCell.swift */; };
+		BB99F26B1FDB2C5500F9982C /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB99F26A1FDB2C5500F9982C /* RestAPIManager.swift */; };
 		BBE42D511FBEC09F009E0BA9 /* DemoMockCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE42D501FBEC09F009E0BA9 /* DemoMockCase.swift */; };
 		BBE42D531FBEC24B009E0BA9 /* GreatWeatherMockCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE42D521FBEC24B009E0BA9 /* GreatWeatherMockCase.swift */; };
 /* End PBXBuildFile section */
@@ -40,10 +45,11 @@
 /* Begin PBXFileReference section */
 		16FB6E0F17A4BF3F79511B60 /* Pods_DIMockServerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DIMockServerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		219E3D54F63B58F1E104D817 /* Pods-DIMockServerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DIMockServerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DIMockServerDemo/Pods-DIMockServerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		BB03B7041FDB1BD000D22AF8 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		BB6F8F361FBE0289003B3AD1 /* DIMockServerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIMockServerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6F8F391FBE028A003B3AD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB6F8F3B1FBE028A003B3AD1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		BB6F8F3D1FBE028A003B3AD1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BB6F8F3B1FBE028A003B3AD1 /* CoinsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsViewController.swift; sourceTree = "<group>"; };
+		BB6F8F3D1FBE028A003B3AD1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BB6F8F401FBE028A003B3AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB6F8F421FBE028A003B3AD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB6F8F451FBE028A003B3AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +60,10 @@
 		BB6F8F571FBE028A003B3AD1 /* DIMockServerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DIMockServerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6F8F5B1FBE028A003B3AD1 /* DIMockServerDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIMockServerDemoUITests.swift; sourceTree = "<group>"; };
 		BB6F8F5D1FBE028A003B3AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB872F5D1FDB46E50024C897 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BB872F5F1FDB47E60024C897 /* PickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerCell.swift; path = Cells/PickerCell.swift; sourceTree = "<group>"; };
+		BB99F2661FDB235500F9982C /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoinCell.swift; path = Cells/CoinCell.swift; sourceTree = "<group>"; };
+		BB99F26A1FDB2C5500F9982C /* RestAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
 		BBE42D501FBEC09F009E0BA9 /* DemoMockCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoMockCase.swift; sourceTree = "<group>"; };
 		BBE42D521FBEC24B009E0BA9 /* GreatWeatherMockCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatWeatherMockCase.swift; sourceTree = "<group>"; };
 		E80679FAD7C742D16289AB45 /* Pods-DIMockServerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DIMockServerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DIMockServerDemo/Pods-DIMockServerDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +104,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BB03B7031FDB1BB300D22AF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB03B7041FDB1BD000D22AF8 /* Coin.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BB6F8F2D1FBE0289003B3AD1 = {
 			isa = PBXGroup;
 			children = (
@@ -119,10 +137,13 @@
 		BB6F8F381FBE0289003B3AD1 /* DIMockServerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BB03B7031FDB1BB300D22AF8 /* Models */,
+				BB99F2651FDB233C00F9982C /* Views */,
+				BB99F2681FDB25EB00F9982C /* Controllers */,
+				BB99F2691FDB2C4200F9982C /* Managers */,
 				BBE42D4F1FBE2F5E009E0BA9 /* MockCases */,
 				BB6F8F391FBE028A003B3AD1 /* AppDelegate.swift */,
-				BB6F8F3B1FBE028A003B3AD1 /* FirstViewController.swift */,
-				BB6F8F3D1FBE028A003B3AD1 /* SecondViewController.swift */,
+				BB872F5D1FDB46E50024C897 /* Constants.swift */,
 				BB6F8F3F1FBE028A003B3AD1 /* Main.storyboard */,
 				BB6F8F421FBE028A003B3AD1 /* Assets.xcassets */,
 				BB6F8F441FBE028A003B3AD1 /* LaunchScreen.storyboard */,
@@ -147,6 +168,32 @@
 				BB6F8F5D1FBE028A003B3AD1 /* Info.plist */,
 			);
 			path = DIMockServerDemoUITests;
+			sourceTree = "<group>";
+		};
+		BB99F2651FDB233C00F9982C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB99F2661FDB235500F9982C /* CoinCell.swift */,
+				BB872F5F1FDB47E60024C897 /* PickerCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB99F2681FDB25EB00F9982C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB6F8F3B1FBE028A003B3AD1 /* CoinsViewController.swift */,
+				BB6F8F3D1FBE028A003B3AD1 /* SettingsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BB99F2691FDB2C4200F9982C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BB99F26A1FDB2C5500F9982C /* RestAPIManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		BBE42D4F1FBE2F5E009E0BA9 /* MockCases */ = {
@@ -310,6 +357,7 @@
 				"${BUILT_PRODUCTS_DIR}/GRMustache.swift/Mustache.framework",
 				"${BUILT_PRODUCTS_DIR}/QorumLogs/QorumLogs.framework",
 				"${BUILT_PRODUCTS_DIR}/Swifter/Swifter.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -317,6 +365,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mustache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QorumLogs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swifter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -363,11 +412,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB03B7051FDB1BD000D22AF8 /* Coin.swift in Sources */,
 				BBE42D531FBEC24B009E0BA9 /* GreatWeatherMockCase.swift in Sources */,
+				BB99F26B1FDB2C5500F9982C /* RestAPIManager.swift in Sources */,
 				BBE42D511FBEC09F009E0BA9 /* DemoMockCase.swift in Sources */,
-				BB6F8F3E1FBE028A003B3AD1 /* SecondViewController.swift in Sources */,
+				BB6F8F3E1FBE028A003B3AD1 /* SettingsViewController.swift in Sources */,
 				BB6F8F3A1FBE028A003B3AD1 /* AppDelegate.swift in Sources */,
-				BB6F8F3C1FBE028A003B3AD1 /* FirstViewController.swift in Sources */,
+				BB6F8F3C1FBE028A003B3AD1 /* CoinsViewController.swift in Sources */,
+				BB99F2671FDB235500F9982C /* CoinCell.swift in Sources */,
+				BB872F5E1FDB46E60024C897 /* Constants.swift in Sources */,
+				BB872F601FDB47E60024C897 /* PickerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +592,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DIMockServerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"DEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.digitalindiana.dimockserverdemo;
@@ -554,6 +609,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DIMockServerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.digitalindiana.dimockserverdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
