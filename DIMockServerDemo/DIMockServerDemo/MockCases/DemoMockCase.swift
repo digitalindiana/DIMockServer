@@ -11,24 +11,30 @@ import DIMockServer
 import Swifter
 
 extension MockCase {
-    func cities() throws -> HttpResponse { return HttpResponse.notFound }
-    func weather() throws -> HttpResponse { return HttpResponse.notFound }
+    func ticker() throws -> HttpResponse { return HttpResponse.notFound }
+    func global() throws -> HttpResponse { return HttpResponse.notFound }
+    func debug() throws -> HttpResponse { return HttpResponse.notFound }
 }
 
 class DemoMockCase: NSObject, MockCase {
     var request: HttpRequest?
     
-    func cities() throws -> HttpResponse {
-        return .accepted
+    func ticker() throws -> HttpResponse {
+        return self.jsonFileResponse("DefaultTickerResponse")
     }
-    
-    func weather() throws -> HttpResponse {
-        return self.jsonStringResponse("{\"response\":\"DemoMockCase_\(request?.params[":city_name"] ?? "NONE")\"}")
+
+    func global() throws -> HttpResponse {
+        return self.jsonFileResponse("DefaultGlobalResponse")
+    }
+
+    func debug() throws -> HttpResponse {
+        return self.jsonStringResponse("{\"request_data\":\"\(request?.params[":data"] ?? "NONE")\"}")
     }
     
     func urlMappings() -> URLMappings {
-        return ["/places": self.cities,
-                "/weather/:city_name": self.weather]
+        return ["v1/ticker/?limit=:limit&convert:currency": self.ticker,
+                "v1/global": self.global,
+                "debug/:data": self.debug]
     }
 }
 

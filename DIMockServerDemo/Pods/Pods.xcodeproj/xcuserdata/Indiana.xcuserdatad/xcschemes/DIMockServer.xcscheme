@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'ED531CCCED349C9AB174001C406E2398'
+               BlueprintIdentifier = '668245A9D6C5E0B4959037F85FD61FA8'
                BlueprintName = 'DIMockServer'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'DIMockServer.framework'>

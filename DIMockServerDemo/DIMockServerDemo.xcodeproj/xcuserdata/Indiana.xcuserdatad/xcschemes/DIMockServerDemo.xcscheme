@@ -86,7 +86,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "UIMockCaseName"
-            value = "GreatWeatherMockCase"
+            value = "DynamicPriceDifferenceMockCase"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

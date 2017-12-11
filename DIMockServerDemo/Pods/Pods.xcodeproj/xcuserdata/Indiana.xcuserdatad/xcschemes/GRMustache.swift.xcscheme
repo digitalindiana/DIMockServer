@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1140B1534352670A3CE79EE09134844A"
+               BlueprintIdentifier = "355E62D1AE2183DDDB26ABBF95B378B4"
                BuildableName = "Mustache.framework"
                BlueprintName = "GRMustache.swift"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1140B1534352670A3CE79EE09134844A"
+            BlueprintIdentifier = "355E62D1AE2183DDDB26ABBF95B378B4"
             BuildableName = "Mustache.framework"
             BlueprintName = "GRMustache.swift"
             ReferencedContainer = "container:Pods.xcodeproj">

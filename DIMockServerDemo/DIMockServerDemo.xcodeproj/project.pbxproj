@@ -19,10 +19,12 @@
 		BB6F8F5C1FBE028A003B3AD1 /* DIMockServerDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F8F5B1FBE028A003B3AD1 /* DIMockServerDemoUITests.swift */; };
 		BB872F5E1FDB46E60024C897 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB872F5D1FDB46E50024C897 /* Constants.swift */; };
 		BB872F601FDB47E60024C897 /* PickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB872F5F1FDB47E60024C897 /* PickerCell.swift */; };
+		BB9736731FDEB00500354CD4 /* DefaultTickerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = BB9736721FDEB00500354CD4 /* DefaultTickerResponse.json */; };
+		BB9736771FDEB2F100354CD4 /* Tickers.mustache in Resources */ = {isa = PBXBuildFile; fileRef = BB9736761FDEB2F100354CD4 /* Tickers.mustache */; };
 		BB99F2671FDB235500F9982C /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB99F2661FDB235500F9982C /* CoinCell.swift */; };
 		BB99F26B1FDB2C5500F9982C /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB99F26A1FDB2C5500F9982C /* RestAPIManager.swift */; };
 		BBE42D511FBEC09F009E0BA9 /* DemoMockCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE42D501FBEC09F009E0BA9 /* DemoMockCase.swift */; };
-		BBE42D531FBEC24B009E0BA9 /* GreatWeatherMockCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE42D521FBEC24B009E0BA9 /* GreatWeatherMockCase.swift */; };
+		BBE42D531FBEC24B009E0BA9 /* DynamicPriceDifferenceMockCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE42D521FBEC24B009E0BA9 /* DynamicPriceDifferenceMockCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,10 +64,13 @@
 		BB6F8F5D1FBE028A003B3AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB872F5D1FDB46E50024C897 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BB872F5F1FDB47E60024C897 /* PickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerCell.swift; path = Cells/PickerCell.swift; sourceTree = "<group>"; };
+		BB9736721FDEB00500354CD4 /* DefaultTickerResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DefaultTickerResponse.json; sourceTree = "<group>"; };
+		BB9736741FDEB04A00354CD4 /* DefaultGlobalResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DefaultGlobalResponse.json; sourceTree = "<group>"; };
+		BB9736761FDEB2F100354CD4 /* Tickers.mustache */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tickers.mustache; sourceTree = "<group>"; };
 		BB99F2661FDB235500F9982C /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoinCell.swift; path = Cells/CoinCell.swift; sourceTree = "<group>"; };
 		BB99F26A1FDB2C5500F9982C /* RestAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIManager.swift; sourceTree = "<group>"; };
 		BBE42D501FBEC09F009E0BA9 /* DemoMockCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoMockCase.swift; sourceTree = "<group>"; };
-		BBE42D521FBEC24B009E0BA9 /* GreatWeatherMockCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatWeatherMockCase.swift; sourceTree = "<group>"; };
+		BBE42D521FBEC24B009E0BA9 /* DynamicPriceDifferenceMockCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicPriceDifferenceMockCase.swift; sourceTree = "<group>"; };
 		E80679FAD7C742D16289AB45 /* Pods-DIMockServerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DIMockServerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DIMockServerDemo/Pods-DIMockServerDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +175,23 @@
 			path = DIMockServerDemoUITests;
 			sourceTree = "<group>";
 		};
+		BB9736711FDEAFE200354CD4 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				BB9736721FDEB00500354CD4 /* DefaultTickerResponse.json */,
+				BB9736741FDEB04A00354CD4 /* DefaultGlobalResponse.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		BB9736751FDEB2B900354CD4 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				BB9736761FDEB2F100354CD4 /* Tickers.mustache */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
 		BB99F2651FDB233C00F9982C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,8 +221,10 @@
 		BBE42D4F1FBE2F5E009E0BA9 /* MockCases */ = {
 			isa = PBXGroup;
 			children = (
+				BB9736751FDEB2B900354CD4 /* Templates */,
+				BB9736711FDEAFE200354CD4 /* JSON */,
 				BBE42D501FBEC09F009E0BA9 /* DemoMockCase.swift */,
-				BBE42D521FBEC24B009E0BA9 /* GreatWeatherMockCase.swift */,
+				BBE42D521FBEC24B009E0BA9 /* DynamicPriceDifferenceMockCase.swift */,
 			);
 			path = MockCases;
 			sourceTree = "<group>";
@@ -323,8 +347,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB9736731FDEB00500354CD4 /* DefaultTickerResponse.json in Resources */,
 				BB6F8F461FBE028A003B3AD1 /* LaunchScreen.storyboard in Resources */,
 				BB6F8F431FBE028A003B3AD1 /* Assets.xcassets in Resources */,
+				BB9736771FDEB2F100354CD4 /* Tickers.mustache in Resources */,
 				BB6F8F411FBE028A003B3AD1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,7 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB03B7051FDB1BD000D22AF8 /* Coin.swift in Sources */,
-				BBE42D531FBEC24B009E0BA9 /* GreatWeatherMockCase.swift in Sources */,
+				BBE42D531FBEC24B009E0BA9 /* DynamicPriceDifferenceMockCase.swift in Sources */,
 				BB99F26B1FDB2C5500F9982C /* RestAPIManager.swift in Sources */,
 				BBE42D511FBEC09F009E0BA9 /* DemoMockCase.swift in Sources */,
 				BB6F8F3E1FBE028A003B3AD1 /* SettingsViewController.swift in Sources */,

@@ -8,6 +8,15 @@
 
 import SwiftyJSON
 
+struct CoinStructure {
+    static let id = "id"
+    static let name = "name"
+    static let symbol = "symbol"
+    static let rank = "rank"
+    static let priceUsd = "price_usd"
+    static let priceBtc = "price_btc"
+}
+
 class Coin {
     var uid: String!
     var name: String!
@@ -22,12 +31,12 @@ class Coin {
     // Mappable
     required init(JSON: JSON, currency: String = Constants.defaultCurrency) {
         self.lastPriceBtc = priceBtc
-        self.uid          = JSON["id"].stringValue
-        self.name         = JSON["name"].stringValue
-        self.symbol       = JSON["symbol"].stringValue
-        self.rank         = JSON["rank"].intValue
-        self.priceUsd     = JSON["price_usd"].doubleValue
-        self.priceBtc     = JSON["price_btc"].doubleValue
+        self.uid          = JSON[CoinStructure.id].stringValue
+        self.name         = JSON[CoinStructure.name].stringValue
+        self.symbol       = JSON[CoinStructure.symbol].stringValue
+        self.rank         = JSON[CoinStructure.rank].intValue
+        self.priceUsd     = JSON[CoinStructure.priceUsd].doubleValue
+        self.priceBtc     = JSON[CoinStructure.priceBtc].doubleValue
 
         let currencyKey   = "price_\(currency.lowercased())"
         self.currency     = currency
