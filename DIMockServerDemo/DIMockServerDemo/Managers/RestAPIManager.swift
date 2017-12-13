@@ -44,7 +44,7 @@ class RestAPIManager {
         })
     }
 
-    func makeHTTPGetRequest(path: String, completion: @escaping RestResponse) {
+    private func makeHTTPGetRequest(path: String, completion: @escaping RestResponse) {
         let route = "\(baseURL)\(path)"
         guard let url = URL(string: route) else {
             completion(nil, RestAPIError.wrongUrl)
