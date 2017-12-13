@@ -15,6 +15,10 @@ struct CoinStructure {
     static let rank = "rank"
     static let priceUsd = "price_usd"
     static let priceBtc = "price_btc"
+    
+    static func currencyKey(currency: String) -> String {
+        return "price_\(currency.lowercased())"
+    }
 }
 
 class Coin {
@@ -38,7 +42,7 @@ class Coin {
         self.priceUsd     = JSON[CoinStructure.priceUsd].doubleValue
         self.priceBtc     = JSON[CoinStructure.priceBtc].doubleValue
 
-        let currencyKey   = "price_\(currency.lowercased())"
+        let currencyKey   = CoinStructure.currencyKey(currency: currency)
         self.currency     = currency
         self.price        = JSON[currencyKey].doubleValue
     }
