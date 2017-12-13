@@ -17,7 +17,7 @@ class DynamicPriceDifferenceMockCase: DemoMockCase {
     override func ticker() throws -> HttpResponse {
         self.requestCounter += 1
 
-        let btcPriceUsd = String(self.requestCounter * 1000)
+        let btcPriceUsd = String(Double(self.requestCounter * 1000))
         let bitcoin = [CoinStructure.id: "btc",
                        CoinStructure.name: "Bitcoin",
                        CoinStructure.symbol: "BTC",
@@ -25,7 +25,7 @@ class DynamicPriceDifferenceMockCase: DemoMockCase {
                        CoinStructure.priceUsd: btcPriceUsd,
                        CoinStructure.priceBtc: "1.0"]
 
-        let ethPriceUsd = String(self.requestCounter * 10)
+        let ethPriceUsd = String(Double(self.requestCounter * 10))
         let ethereum = [CoinStructure.id: "ethereum",
                         CoinStructure.name: "Ethereum",
                         CoinStructure.symbol: "ETH",
