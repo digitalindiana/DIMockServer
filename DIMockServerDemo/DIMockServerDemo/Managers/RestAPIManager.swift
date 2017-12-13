@@ -7,6 +7,8 @@
 //
 
 import SwiftyJSON
+import QorumLogs
+import DIMockServer
 
 typealias RestResponse = (JSON?, Error?) -> Void
 typealias RestCurrencyResponse = (JSON?, String, Error?) -> Void
@@ -23,9 +25,17 @@ public enum RestAPIError: Error {
 
 class RestAPIManager {
     static let shared = RestAPIManager()
-    let baseURL = "https://api.coinmarketcap.com/"
+    var baseURL = "https://api.coinmarketcap.com/"
+    var currentCurrency = Constants.defaultCurrency;
 
-    var currentCurrency = "USD";
+    required init() {
+        if (DIMockServer.isRunning) {
+            guard let url = DIMockServer.url?.absoluteString else {
+                return
+            }
+            baseURL = url
+        }
+    }
 
     func fetchTopCoins(completion: @escaping RestCurrencyResponse) {
         let currency = self.currentCurrency
@@ -40,6 +50,8 @@ class RestAPIManager {
             completion(nil, RestAPIError.wrongUrl)
             return
         }
+
+        QL1("Fetching data from url: \(url)")
 
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
             completion(JSON(data), error)

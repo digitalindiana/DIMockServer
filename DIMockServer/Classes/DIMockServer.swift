@@ -11,7 +11,10 @@ import Swifter
 import QorumLogs
 
 public class DIMockServer : NSObject {
-    
+
+    private(set) public static var isRunning: Bool = false
+    private(set) public static var url: URL?
+
     let server: HttpServer = HttpServer()
     let baseMockCaseClass: AnyClass
     let urlMockMapper = URLMockMapper()
@@ -37,6 +40,7 @@ public class DIMockServer : NSObject {
         self.mockCaseName = mockCaseName
         self.baseMockCaseClass = baseMockCaseClass
         QorumLogs.enabled = enableLogs
+        DIMockServer.url = URL(string: "http://localhost:\(self.port)/")
     }
     
    
@@ -48,6 +52,7 @@ public class DIMockServer : NSObject {
         
         do {
             try server.start(port)
+            DIMockServer.isRunning = true
             QL2("MOCK_SERVER: Started at port: \(port)")
         }
         catch {
@@ -57,6 +62,7 @@ public class DIMockServer : NSObject {
     
     public func stop() {
         server.stop()
+        DIMockServer.isRunning = false
     }
     
     private func setup() -> Bool {

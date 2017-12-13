@@ -46,10 +46,10 @@ class Coin {
     func formattedPrice() -> String {
         guard let currency = currency,
               let price = price else {
-                return String(format: "%.3f USD", self.priceUsd)
+                return String(format: "%.2f USD", self.priceUsd)
         }
 
-        return String(format: "%.3f %@", price, currency)
+        return String(format: "%.2f %@", price, currency)
     }
 
     func formattedDifference() -> String {
