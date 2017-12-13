@@ -95,7 +95,7 @@ In order to load your data, we need to setup mock cases and start server.
 	```
 	func initalizeMockServer() {
 		self.mockServer = DIMockServer(baseMockCaseClass: DemoMockCase.self)
-        self.mockServer?.start()
+        	self.mockServer?.start()
 	}
 	
 	```
