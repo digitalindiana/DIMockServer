@@ -140,6 +140,17 @@ You can also provide extra parameters to your tests like
 - `goToForeground`
 - `resetLocationPrivacySettings`
 
+Sample UI Test
+
+```
+    func testAppRunningFromDemoMockCaseWithHelper() {
+        let app = XCUIApplication.launch(with: "DemoMockCase")
+
+        let bitcoinCell = app.cells.staticTexts["Bitcoin"]
+        XCTAssertTrue(bitcoinCell.waitForExistence(timeout: 10))
+    }
+```
+
 
 FAQ
 ----
