@@ -17,6 +17,7 @@
 		BB6F8F461FBE028A003B3AD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB6F8F441FBE028A003B3AD1 /* LaunchScreen.storyboard */; };
 		BB6F8F511FBE028A003B3AD1 /* DIMockServerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F8F501FBE028A003B3AD1 /* DIMockServerDemoTests.swift */; };
 		BB6F8F5C1FBE028A003B3AD1 /* DIMockServerDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F8F5B1FBE028A003B3AD1 /* DIMockServerDemoUITests.swift */; };
+		BB746E0B1FE3036F0056E2AA /* XCUIApplicationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB746E061FE301F80056E2AA /* XCUIApplicationHelper.swift */; };
 		BB872F5E1FDB46E60024C897 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB872F5D1FDB46E50024C897 /* Constants.swift */; };
 		BB872F601FDB47E60024C897 /* PickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB872F5F1FDB47E60024C897 /* PickerCell.swift */; };
 		BB9736731FDEB00500354CD4 /* DefaultTickerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = BB9736721FDEB00500354CD4 /* DefaultTickerResponse.json */; };
@@ -62,6 +63,7 @@
 		BB6F8F571FBE028A003B3AD1 /* DIMockServerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DIMockServerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6F8F5B1FBE028A003B3AD1 /* DIMockServerDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIMockServerDemoUITests.swift; sourceTree = "<group>"; };
 		BB6F8F5D1FBE028A003B3AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB746E061FE301F80056E2AA /* XCUIApplicationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIApplicationHelper.swift; sourceTree = "<group>"; };
 		BB872F5D1FDB46E50024C897 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BB872F5F1FDB47E60024C897 /* PickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerCell.swift; path = Cells/PickerCell.swift; sourceTree = "<group>"; };
 		BB9736721FDEB00500354CD4 /* DefaultTickerResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DefaultTickerResponse.json; sourceTree = "<group>"; };
@@ -169,10 +171,19 @@
 		BB6F8F5A1FBE028A003B3AD1 /* DIMockServerDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
+				BB746E0A1FE302060056E2AA /* Helpers */,
 				BB6F8F5B1FBE028A003B3AD1 /* DIMockServerDemoUITests.swift */,
 				BB6F8F5D1FBE028A003B3AD1 /* Info.plist */,
 			);
 			path = DIMockServerDemoUITests;
+			sourceTree = "<group>";
+		};
+		BB746E0A1FE302060056E2AA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BB746E061FE301F80056E2AA /* XCUIApplicationHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		BB9736711FDEAFE200354CD4 /* JSON */ = {
@@ -464,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6F8F5C1FBE028A003B3AD1 /* DIMockServerDemoUITests.swift in Sources */,
+				BB746E0B1FE3036F0056E2AA /* XCUIApplicationHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -87,7 +87,7 @@
          <EnvironmentVariable
             key = "UIMockCaseName"
             value = "DynamicPriceDifferenceMockCase"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "OS_ACTIVITY_MODE"

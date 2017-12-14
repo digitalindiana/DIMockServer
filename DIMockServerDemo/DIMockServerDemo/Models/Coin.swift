@@ -67,10 +67,8 @@ class Coin {
         var sign = ""
         if (difference > 0) {
             sign = "+"
-        } else if (difference < 0) {
-            sign = "-"
         }
-
+        
         return "\(sign)\(formattedDifference)"
     }
 }

@@ -17,8 +17,8 @@ public protocol MockCase {
 
 public extension MockCase {
     
-    public func jsonFileResponse(_ jsonFile: String, status: Int = 200) -> HttpResponse {
-        let json = JSONFileLoader.loadJSON(jsonFile) as AnyObject
+    public func jsonFileResponse(_ jsonFile: String, status: Int = 200, bundle: Bundle = Bundle.main) -> HttpResponse {
+        let json = JSONFileLoader.loadJSON(jsonFile, bundle: bundle) as AnyObject
 
         return .raw(status, "OK", ["Content-Type" : "application/json"], {
             let data = try JSONSerialization.data(withJSONObject: json)

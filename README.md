@@ -125,3 +125,29 @@ You can also provide extra parameters to your tests like
 - `goToBackground`
 - `goToForeground`
 - `resetLocationPrivacySettings`
+
+FAQ
+----
+
+Simulator is asking me for permission each time i run app, what can i do?
+
+>You can disable firewall for simulator using following commands
+
+```
+#temporarily shut firewall off:
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate off
+	
+#put Xcode as an exception:
+/usr/libexec/ApplicationFirewall/socketfilterfw --add /Applications/Xcode.app/Contents/MacOS/Xcode
+
+#put iOS Simulator as an exception:
+/usr/libexec/ApplicationFirewall/socketfilterfw --add /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator
+
+#re-enable firewall:
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+```
+
+Can i speed up UI Test execution?
+
+>Partially yes, you can speed up animations in your app by using following code
+`UIApplication.shared.windows.first?.layer.speed = 5.0`
