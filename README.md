@@ -133,9 +133,13 @@ You can also provide extra parameters to your tests like
 
 `DIMockServer` comes with few helper methods for `XCUIApplication` like:
 - `pullToRefresh`
+- `labelContaining(string: String) -> XCUIElement`
+- `swipeUpAndTap(element: XCUIElement, forceSwipe: Bool = false)`
 - `goToBackground`
+- `isBackgrounded`
 - `goToForeground`
 - `resetLocationPrivacySettings`
+
 
 FAQ
 ----
