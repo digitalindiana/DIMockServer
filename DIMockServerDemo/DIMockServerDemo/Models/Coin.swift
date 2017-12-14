@@ -24,13 +24,13 @@ class Coin {
     var rank: Int!
     var priceUsd: Double!
     var priceBtc: Double!
-    var lastPriceBtc: Double?
+    var lastPriceUsd: Double?
     var currency: String?
     var price: Double?
 
     // Mappable
     required init(JSON: JSON, currency: String = Constants.defaultCurrency) {
-        self.lastPriceBtc = priceBtc
+        self.lastPriceUsd = priceUsd
         self.uid          = JSON[CoinStructure.id].stringValue
         self.name         = JSON[CoinStructure.name].stringValue
         self.symbol       = JSON[CoinStructure.symbol].stringValue
@@ -53,15 +53,15 @@ class Coin {
     }
 
     func formattedDifference() -> String {
-        guard let lastPriceBtc = lastPriceBtc else {
+        guard let lastPriceUsd = lastPriceUsd else {
             return "0.000%"
         }
 
-        if (lastPriceBtc == 0) {
+        if (lastPriceUsd == 0) {
             return "0.000%"
         }
 
-        let difference = ((self.priceBtc - lastPriceBtc) / lastPriceBtc) * 100.0
+        let difference = ((self.priceUsd - lastPriceUsd) / lastPriceUsd) * 100.0
         let formattedDifference = String(format: "%.3f", difference)
 
         var sign = ""
@@ -69,6 +69,6 @@ class Coin {
             sign = "+"
         }
         
-        return "\(sign)\(formattedDifference)"
+        return "\(sign)\(formattedDifference)%"
     }
 }

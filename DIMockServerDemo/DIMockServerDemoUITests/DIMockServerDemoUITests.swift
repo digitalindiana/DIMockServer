@@ -32,4 +32,26 @@ class DIMockServerDemoUITests: XCTestCase {
         let bitcoinCell = app.cells.staticTexts["ShitCoin"]
         XCTAssertFalse(bitcoinCell.waitForExistence(timeout: 10))
     }
+
+    func testPriceDifferenceAfterPullRefresh() {
+        let app = XCUIApplication.launch(with: "DynamicPriceDifferenceMockCase")
+
+        let zeroPrecentDifference = app.cells.staticTexts["0.000%"]
+        XCTAssertTrue(zeroPrecentDifference.waitForExistence(timeout: 10))
+
+        app.pullToRefresh()
+
+        let oneHundredPrecentDifference = app.cells.staticTexts["+100.000%"]
+        XCTAssertTrue(oneHundredPrecentDifference.waitForExistence(timeout: 10))
+
+        app.pullToRefresh()
+
+        let fiftyPrecentDifference = app.labelContaining("50.000%")
+        XCTAssertTrue(fiftyPrecentDifference.waitForExistence(timeout: 10))
+
+        app.pullToRefresh()
+
+        let oneThirdPrecentDifference = app.cells.staticTexts["+33.333%"]
+        XCTAssertTrue(oneThirdPrecentDifference.waitForExistence(timeout: 10))
+    }
 }

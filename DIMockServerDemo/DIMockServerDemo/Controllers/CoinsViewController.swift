@@ -72,7 +72,7 @@ extension CoinsViewController {
                 //Update last price
                 coins = coins.map({ (freshCoin) -> Coin in
                     let savedCoin = self.coins.filter { $0.uid == freshCoin.uid }.first
-                    freshCoin.lastPriceBtc = savedCoin?.priceBtc
+                    freshCoin.lastPriceUsd = savedCoin?.priceUsd
                     return freshCoin
                 })
 
