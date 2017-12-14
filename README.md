@@ -78,6 +78,15 @@ Setting up Environment Variables to test
 
 ![Setting Environment Variables](https://raw.githubusercontent.com/digitalindiana/DIMockServer/master/Resources/enviroment_variable.gif)
 
+You don't have to worry about wrong name of mock case, even if you will fill up `UIMockCaseName` with wrong name, you will be notified about it.
+
+``` 
+MockCaseBuilder.swift:20 build(_:baseMockCaseClass:): ❤️MOCK_SERVER: ERROR: Mock case not found: WrongMockCase❤️
+ MockCaseBuilder.swift:40 printAvailableMockCases: 💙MOCK_SERVER: Available mock cases:💙
+ MockCaseBuilder.swift:41 printAvailableMockCases: 💙DemoMockCase💙
+ MockCaseBuilder.swift:44 printAvailableMockCases: 💙DynamicPriceDifferenceMockCase💙
+```
+
 How does DIMockServer work?
 -----
 In order to load your data, we need to setup mock cases and start server. 
@@ -95,13 +104,15 @@ In order to load your data, we need to setup mock cases and start server.
 	```
 	func initalizeMockServer() {
 		self.mockServer = DIMockServer(baseMockCaseClass: DemoMockCase.self)
-        	self.mockServer?.start()
+        self.mockServer?.start()
 	}
 	
 	```
 1. `start` mock server will take a look into your `Environment Variables` and look for `UIMockCaseName` key, it will automatically create instance of your `MockCase` 
 
 `DIMockServer` is based on [`Swifter`](https://github.com/httpswift/swifter) to handle all HTTP traffic. 
+
+![Setting Environment Variables](https://raw.githubusercontent.com/digitalindiana/DIMockServer/master/Resources/mock_server.png)
 
 You can use any type of response that are available in `Swifter` , look into `HttpResponse` class. 
 
@@ -146,8 +157,3 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate off
 #re-enable firewall:
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 ```
-
-Can i speed up UI Test execution?
-
->Partially yes, you can speed up animations in your app by using following code
-`UIApplication.shared.windows.first?.layer.speed = 5.0`
