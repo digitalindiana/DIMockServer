@@ -141,7 +141,7 @@ You can also provide extra parameters to your tests like
 ## FAQ
 ----
 
-How can i allow local networking?
+How can I allow local networking?
 > Please add following in your `Info.plist` file  
 ```
     <key>NSAppTransportSecurity</key>
