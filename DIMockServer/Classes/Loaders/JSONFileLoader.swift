@@ -11,9 +11,9 @@ import QorumLogs
 
 class JSONFileLoader {
     
-    static func loadJSON(_ fileName: String) -> Any? {
+    static func loadJSON(_ fileName: String, bundle: Bundle) -> Any? {
         
-        guard let url  = Bundle(for: self).url(forResource: fileName, withExtension: "json"),
+        guard let url  = bundle.url(forResource: fileName, withExtension: "json"),
               let data = try? Data(contentsOf: url) else {
             QL4("MOCK_SERVER: ERROR: Unable to load \(fileName).json")
             return nil
