@@ -26,6 +26,7 @@
 		BB99F26B1FDB2C5500F9982C /* RestAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB99F26A1FDB2C5500F9982C /* RestAPIManager.swift */; };
 		BBE42D511FBEC09F009E0BA9 /* DemoMockCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE42D501FBEC09F009E0BA9 /* DemoMockCase.swift */; };
 		BBE42D531FBEC24B009E0BA9 /* DynamicPriceDifferenceMockCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE42D521FBEC24B009E0BA9 /* DynamicPriceDifferenceMockCase.swift */; };
+		F43A2CCE1FE13DAC00FE17F2 /* CurrencyConversionMockCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43A2CCD1FE13DAC00FE17F2 /* CurrencyConversionMockCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		BBE42D501FBEC09F009E0BA9 /* DemoMockCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoMockCase.swift; sourceTree = "<group>"; };
 		BBE42D521FBEC24B009E0BA9 /* DynamicPriceDifferenceMockCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicPriceDifferenceMockCase.swift; sourceTree = "<group>"; };
 		E80679FAD7C742D16289AB45 /* Pods-DIMockServerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DIMockServerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DIMockServerDemo/Pods-DIMockServerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F43A2CCD1FE13DAC00FE17F2 /* CurrencyConversionMockCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionMockCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				BB9736711FDEAFE200354CD4 /* JSON */,
 				BBE42D501FBEC09F009E0BA9 /* DemoMockCase.swift */,
 				BBE42D521FBEC24B009E0BA9 /* DynamicPriceDifferenceMockCase.swift */,
+				F43A2CCD1FE13DAC00FE17F2 /* CurrencyConversionMockCase.swift */,
 			);
 			path = MockCases;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				BB6F8F3A1FBE028A003B3AD1 /* AppDelegate.swift in Sources */,
 				BB6F8F3C1FBE028A003B3AD1 /* CoinsViewController.swift in Sources */,
 				BB99F2671FDB235500F9982C /* CoinCell.swift in Sources */,
+				F43A2CCE1FE13DAC00FE17F2 /* CurrencyConversionMockCase.swift in Sources */,
 				BB872F5E1FDB46E60024C897 /* Constants.swift in Sources */,
 				BB872F601FDB47E60024C897 /* PickerCell.swift in Sources */,
 			);

@@ -15,6 +15,9 @@
         "percent_change_24h": "-0.3",
         "percent_change_7d": "-0.57",
         "last_updated": "1472762067"
+        {{#ticker_prices}}
+            ,"{{ price_key }}": "{{ price_key_value }}"
+        {{/ticker_prices}}
     }
     {{^ @last }}, {{/}}
 {{/tickers}}
