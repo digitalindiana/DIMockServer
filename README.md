@@ -151,7 +151,7 @@ How can I allow local networking?
     </dict>
 ```
 
-Simulator is asking me for permission each time i run app, what can i do?
+Simulator is asking me for permission each time I run app, what can I do?
 
 >You can disable firewall for simulator using following commands
 
