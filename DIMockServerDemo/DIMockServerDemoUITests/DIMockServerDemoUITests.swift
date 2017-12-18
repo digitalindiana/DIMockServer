@@ -54,4 +54,33 @@ class DIMockServerDemoUITests: XCTestCase {
         let oneThirdPrecentDifference = app.cells.staticTexts["+33.333%"]
         XCTAssertTrue(oneThirdPrecentDifference.waitForExistence(timeout: 10))
     }
+    
+    func testCurrencyConversion() -> Void {
+        let app = XCUIApplication.launch(with: "CurrencyConversionMockCase")
+        
+        
+        let tablesQuery = app.tables
+        let bitcoinUSDPrice = tablesQuery.staticTexts["1000.00 USD"]
+        XCTAssertTrue(bitcoinUSDPrice.waitForExistence(timeout: 10))
+        
+        let etherumUSDPrice = tablesQuery.staticTexts["10.00 USD"]
+        XCTAssertTrue(etherumUSDPrice.waitForExistence(timeout: 10))
+        
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Settings"].tap()
+        
+        app.tables.staticTexts["Selected currency"].tap()
+        
+        
+        app.pickerWheels.element(boundBy: 0).adjust(toPickerWheelValue: "PLN")
+        
+        app.toolbars.buttons["Done"].tap()
+        tabBarsQuery.buttons["Coins"].tap()
+        
+        let bitcoinPLNPrice = tablesQuery.staticTexts["123.00 PLN"]
+        XCTAssertTrue(bitcoinPLNPrice.waitForExistence(timeout: 10))
+        
+        let etherumPLNPrice = tablesQuery.staticTexts["4343.00 PLN"]
+        XCTAssertTrue(etherumPLNPrice.waitForExistence(timeout: 10))
+    }
 }
