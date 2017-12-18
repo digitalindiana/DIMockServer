@@ -30,8 +30,8 @@ Getting started
 1. Update your local `API` manager `base URL` to `DIMockServer` url when server is running
 > **Note:**  You can check if `DIMockServer` is running by `DIMockServer.isRunning` 
 
-4. Setup name of mock case that you want to run in `Environment Variables`
-5. Unleash your **creativity** 🎉  ! 
+5. Setup name of mock case that you want to run in `Environment Variables`
+6. Unleash your **creativity** 🎉  ! 
 
 ## MockCase 
 -----
