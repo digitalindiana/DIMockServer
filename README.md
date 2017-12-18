@@ -25,12 +25,13 @@ Getting started
 -----
 
 1. Integrate `DIMockServer` into your app
+1. Make sure that `App Transport Security Settings` in `Info.plist` allows `Local Networking` see [FAQ](#faq)
 1. Create your base [`MockCase`](#mockcase) 
 1. Update your local `API` manager `base URL` to `DIMockServer` url when server is running
 > **Note:**  You can check if `DIMockServer` is running by `DIMockServer.isRunning` 
 
-1. Setup name of mock case that you want to run in `Environment Variables`
-1. Unleash your **creativity** 🎉  ! 
+4. Setup name of mock case that you want to run in `Environment Variables`
+5. Unleash your **creativity** 🎉  ! 
 
 ## MockCase 
 -----
@@ -92,22 +93,22 @@ How does DIMockServer work?
 In order to load your data, we need to setup mock cases and start server. 
 
 * Prepare `MockCases`
-	* Create new folder in your project called for example: `MockCases` 
-	* Create your [`BaseMockCase`](#mockcase) 
-	* In that folder put your `BaseMockCase`  and `SubBaseMockCase` files
+    * Create new folder in your project called for example: `MockCases` 
+    * Create your [`BaseMockCase`](#mockcase) 
+    * In that folder put your `BaseMockCase`  and `SubBaseMockCase` files
 
 * How to start `DIMockServer` ?
 1. Open your `AppDelegate` 
 1. Add property with `DIMockServer` called for example:
  `var mockServer: DIMockServer?`
 1. Create `func` to initalize mocking server
-	```
-	func initalizeMockServer() {
-		self.mockServer = DIMockServer(baseMockCaseClass: DemoMockCase.self)
-		self.mockServer?.start()
-	}
-	
-	```
+    ```
+    func initalizeMockServer() {
+        self.mockServer = DIMockServer(baseMockCaseClass: DemoMockCase.self)
+        self.mockServer?.start()
+    }
+    
+    ```
 1. `start` mock server will take a look into your `Environment Variables` and look for `UIMockCaseName` key, it will automatically create instance of your `MockCase` 
 
 `DIMockServer` is based on [`Swifter`](https://github.com/httpswift/swifter) to handle all HTTP traffic. 
@@ -133,27 +134,22 @@ You can also provide extra parameters to your tests like
 
 `DIMockServer` comes with few helper methods for `XCUIApplication` like:
 - `pullToRefresh`
-- `labelContaining(string: String) -> XCUIElement`
-- `swipeUpAndTap(element: XCUIElement, forceSwipe: Bool = false)`
 - `goToBackground`
-- `isBackgrounded`
 - `goToForeground`
 - `resetLocationPrivacySettings`
 
-Sample UI Test
-
-```
-    func testAppRunningFromDemoMockCaseWithHelper() {
-        let app = XCUIApplication.launch(with: "DemoMockCase")
-
-        let bitcoinCell = app.cells.staticTexts["Bitcoin"]
-        XCTAssertTrue(bitcoinCell.waitForExistence(timeout: 10))
-    }
-```
-
-
-FAQ
+## FAQ
 ----
+
+How can i allow local networking?
+> Please add following in your `Info.plist` file  
+```
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsLocalNetworking</key>
+        <true/>
+    </dict>
+```
 
 Simulator is asking me for permission each time i run app, what can i do?
 
@@ -162,7 +158,7 @@ Simulator is asking me for permission each time i run app, what can i do?
 ```
 #temporarily shut firewall off:
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate off
-	
+    
 #put Xcode as an exception:
 /usr/libexec/ApplicationFirewall/socketfilterfw --add /Applications/Xcode.app/Contents/MacOS/Xcode
 
@@ -172,3 +168,4 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate off
 #re-enable firewall:
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 ```
+
