@@ -21,6 +21,10 @@ What is DIMockServer?
 -----
 It's just a very simple framework that helps you to load different `server mock case` to be accessible by your app.
 
+Small presentation on YouTube
+
+https://www.youtube.com/watch?v=6pEwfI2TGUc
+
 Getting started
 -----
 
